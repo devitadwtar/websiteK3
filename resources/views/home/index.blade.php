@@ -128,7 +128,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card k3-card h-100">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af24?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Penghargaan K3">
+                        <img src="https://cdn.sejutacita.id/dealls-blog-cms/gaji_family_mart_1afba2f041.webp" class="card-img-top" alt="Penghargaan K3">
                         <div class="card-body">
                             <span class="k3-badge">Penghargaan</span>
                             <h5 class="card-title mt-3 text-family-blue">Raih Penghargaan K3 Nasional 2023</h5>
