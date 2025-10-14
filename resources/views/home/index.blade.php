@@ -11,7 +11,7 @@
                     <h1 class="display-4 fw-bold mb-4">Keselamatan dan Kesehatan Kerja Prioritas Kami</h1>
                     <p class="lead mb-4">Family Mart berkomitmen menciptakan lingkungan kerja yang aman, sehat, dan nyaman bagi seluruh karyawan dan pelanggan dengan standar tertinggi.</p>
                     <a href="{{ route('k3') }}" class="btn btn-light btn-lg me-3">Pelajari K3 Kami</a>
-                    <a href="{{ route('about') }}" class="btn btn-outline-light btn-lg">Tentang Kami</a>
+                    <a href="{{ route('about') }}" class="btn btn-light btn-lg me-3">Tentang Kami</a>
                 </div>
             </div>
         </div>
@@ -57,8 +57,8 @@
                     </ul>
                     <a href="{{ route('about') }}" class="btn btn-family-green mt-3">Selengkapnya</a>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Family Mart Store" class="img-fluid rounded shadow-lg">
+               <div class="col-lg-6" data-aos="fade-left">
+                    <img src="{{ asset('images/foto.png') }}" alt="Family Mart Store" class="img-fluid rounded shadow-lg w-100">
                 </div>
             </div>
         </div>

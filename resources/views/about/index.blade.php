@@ -33,9 +33,8 @@
                         <li><i class="fas fa-check-circle text-family-green me-2"></i>Kenyamanan bagi seluruh keluarga Indonesia</li>
                     </ul>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                         alt="Family Mart Store" class="img-fluid rounded shadow-lg">
+                 <div class="col-lg-6" data-aos="fade-left">
+                    <img src="{{ asset('images/foto.png') }}" alt="Family Mart Store" class="img-fluid rounded shadow-lg w-100">
                 </div>
             </div>
         </div>
@@ -113,6 +112,12 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <!-- Tombol Kembali -->
+            <div class="text-center mt-5">
+                <a href="{{ route('k3') }}" class="btn btn-family-green px-4 py-2 shadow-lg">
+                    <i class="fas fa-arrow-left me-2"></i> Kembali ke Halaman Utama K3
+                </a>
             </div>
         </div>
     </section>

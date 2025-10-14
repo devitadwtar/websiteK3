@@ -30,9 +30,8 @@
                         <li><i class="fas fa-check-circle text-family-green me-2"></i>Terus meningkatkan sistem K3</li>
                     </ul>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                         alt="K3 System" class="img-fluid rounded shadow-lg">
+                 <div class="col-lg-6" data-aos="fade-left">
+                    <img src="{{ asset('images/foto.png') }}" alt="Family Mart Store" class="img-fluid rounded shadow-lg w-100">
                 </div>
             </div>
         </div>
