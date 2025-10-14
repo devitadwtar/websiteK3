@@ -10,4 +10,34 @@ class K3Controller extends Controller
     {
         return view('k3.index');
     }
+
+    public function pendahuluan()
+    {
+        return view('k3.pendahuluan');
+    }
+
+    public function landasan()
+    {
+        return view('k3.landasan');
+    }
+
+    public function lingkungan()
+    {
+        return view('k3.lingkungan');
+    }
+
+    public function keselamatan()
+    {
+        return view('k3.keselamatan');
+    }
+
+    public function apd()
+    {
+        return view('k3.apd');
+    }
+
+    public function pertolongan()
+    {
+        return view('k3.pertolongan');
+    }
 }

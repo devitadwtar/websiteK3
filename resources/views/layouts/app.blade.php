@@ -258,7 +258,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
-                <img src="images\familymart-logo.jpg" alt="Family Mart Logo" height="40">
+                <img src="{{ asset('images/familymart-logo.jpg') }}" alt="Family Mart Logo" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -273,24 +273,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('k3') }}">K3 & Keamanan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CSR</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Karir</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Kontak</a>
-                    </li>
-                
-                </ul>
-                <!-- Tombol Login -->
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="btn btn-family-blue btn-sm" href="{{ route('login') }}">
-                            <i class="fas fa-sign-in-alt me-1"></i>Login
-                        </a>
                     </li>
                 </ul>
             </div>
@@ -323,7 +305,6 @@
                         <li><a href="{{ route('home') }}" class="text-white-50">Beranda</a></li>
                         <li><a href="{{ route('about') }}" class="text-white-50">Tentang Kami</a></li>
                         <li><a href="{{ route('k3') }}" class="text-white-50">K3 & Keamanan</a></li>
-                        <li><a href="#" class="text-white-50">CSR</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">

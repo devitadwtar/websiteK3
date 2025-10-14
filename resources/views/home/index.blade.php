@@ -11,7 +11,7 @@
                     <h1 class="display-4 fw-bold mb-4">Keselamatan dan Kesehatan Kerja Prioritas Kami</h1>
                     <p class="lead mb-4">Family Mart berkomitmen menciptakan lingkungan kerja yang aman, sehat, dan nyaman bagi seluruh karyawan dan pelanggan dengan standar tertinggi.</p>
                     <a href="{{ route('k3') }}" class="btn btn-light btn-lg me-3">Pelajari K3 Kami</a>
-                    <a href="{{ route('about') }}" class="btn btn-outline-light btn-lg">Tentang Kami</a>
+                    <a href="{{ route('about') }}" class="btn btn-light btn-lg me-3">Tentang Kami</a>
                 </div>
             </div>
         </div>
@@ -57,97 +57,50 @@
                     </ul>
                     <a href="{{ route('about') }}" class="btn btn-family-green mt-3">Selengkapnya</a>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Family Mart Store" class="img-fluid rounded shadow-lg">
+               <div class="col-lg-6" data-aos="fade-left">
+                    <img src="{{ asset('images/foto.png') }}" alt="Family Mart Store" class="img-fluid rounded shadow-lg w-100">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- K3 Highlights -->
-    <section class="section-padding bg-gradient" style="background: linear-gradient(135deg, var(--family-blue) 0%, var(--family-green) 100%); color: white;">
+    <!-- Program K3 Section -->
+    <section class="section-padding bg-family-light-green">
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-12">
-                    <h2 class="display-5 fw-bold mb-3">Komitmen K3 Kami</h2>
-                    <p class="lead">Keselamatan dan kesehatan adalah tanggung jawab bersama</p>
+                    <h2 class="section-title gradient-text">Program K3 Family Mart</h2>
+                    <p class="text-muted">Pelajari berbagai program K3 kami yang diterapkan di seluruh gerai</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
-                    <div class="text-center p-4">
-                        <div class="icon-wrapper mb-3">
-                            <i class="fas fa-shield-alt fa-3x" style="color: white;"></i>
-                        </div>
-                        <h4>Proteksi Maksimal</h4>
-                        <p>Sistem keamanan dan keselamatan terintegrasi di semua gerai</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="text-center p-4">
-                        <div class="icon-wrapper mb-3">
-                            <i class="fas fa-user-md fa-3x" style="color: white;"></i>
-                        </div>
-                        <h4>Kesehatan Terjaga</h4>
-                        <p>Program kesehatan rutin dan pemeriksaan berkala</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="text-center p-4">
-                        <div class="icon-wrapper mb-3">
-                            <i class="fas fa-graduation-cap fa-3x" style="color: white;"></i>
-                        </div>
-                        <h4>Pelatihan Berkelanjutan</h4>
-                        <p>Pelatihan K3 reguler untuk semua tingkat karyawan</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Latest News -->
-    <section class="section-padding bg-family-light-green">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="section-title gradient-text">Berita K3 Terbaru</h2>
-                    <p class="text-muted">Update terbaru seputar K3 di Family Mart Indonesia</p>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-                    <div class="card k3-card h-100">
-                        <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Pelatihan K3">
-                        <div class="card-body">
-                            <span class="k3-badge">Pelatihan</span>
-                            <h5 class="card-title mt-3 text-family-blue">Pelatihan APAR untuk Seluruh Karyawan</h5>
-                            <p class="card-text text-muted">Program pelatihan penggunaan alat pemadam api ringan untuk meningkatkan kesiapsiagaan...</p>
-                            <a href="#" class="btn btn-family-green">Baca Selengkapnya</a>
-                        </div>
+                @php
+                    $programs = [
+                        ['title' => 'Pendahuluan & Sejarah K3', 'icon' => 'fas fa-book', 'route' => 'k3.pendahuluan'],
+                        ['title' => 'Landasan Hukum K3', 'icon' => 'fas fa-gavel', 'route' => 'k3.landasan'],
+                        ['title' => 'Lingkungan Kerja Fisik', 'icon' => 'fas fa-industry', 'route' => 'k3.lingkungan'],
+                        ['title' => 'Keselamatan Kerja', 'icon' => 'fas fa-hard-hat', 'route' => 'k3.keselamatan'],
+                        ['title' => 'Alat Pelindung Diri (APD)', 'icon' => 'fas fa-shield-alt', 'route' => 'k3.apd'],
+                        ['title' => 'Pertolongan Pertama Pada Kecelakaan Kerja (P3K)', 'icon' => 'fas fa-hand-paper', 'route' => 'k3.pertolongan'],
+                    ];
+                @endphp
+
+                @foreach($programs as $program)
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                        <a href="{{ route($program['route']) }}" class="text-decoration-none">
+                            <div class="card k3-card h-100 text-center">
+                                <div class="card-body p-4">
+                                    <div class="icon-wrapper mb-3">
+                                        <i class="{{ $program['icon'] }} fa-2x text-family-green"></i>
+                                    </div>
+                                    <h5 class="card-title text-family-blue">{{ $program['title'] }}</h5>
+                                    <p class="card-text text-muted">Klik untuk membaca detail</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card k3-card h-100">
-                        <img src="https://cdn.sejutacita.id/dealls-blog-cms/gaji_family_mart_1afba2f041.webp" class="card-img-top" alt="Penghargaan K3">
-                        <div class="card-body">
-                            <span class="k3-badge">Penghargaan</span>
-                            <h5 class="card-title mt-3 text-family-blue">Raih Penghargaan K3 Nasional 2023</h5>
-                            <p class="card-text text-muted">Family Mart kembali meraih penghargaan Zero Accident Award dari Kementerian Ketenagakerjaan...</p>
-                            <a href="#" class="btn btn-family-green">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card k3-card h-100">
-                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Teknologi K3">
-                        <div class="card-body">
-                            <span class="k3-badge">Inovasi</span>
-                            <h5 class="card-title mt-3 text-family-blue">Implementasi Sistem Safety Digital</h5>
-                            <p class="card-text text-muted">Penggunaan teknologi IoT untuk monitoring keselamatan kerja real-time di seluruh gerai...</p>
-                            <a href="#" class="btn btn-family-green">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
